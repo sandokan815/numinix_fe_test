@@ -41,11 +41,11 @@ function renderUsers(users) {
 				<hr class="line-breaker" width="90%" />
 			</div>
 			<div class="personal-info">
-				<img class="icon" src="/public/icons/email.png" alt="${user.email}">
+				<img class="icon" src="public/icons/email.png" alt="${user.email}">
 				<p>${user.email}</p>
 			</div>
 			<div class="personal-info address">
-				<img class="icon" src="/public/icons/address.png" alt="${user.address.street}">
+				<img class="icon" src="public/icons/address.png" alt="${user.address.street}">
 				<p class="address-desktop">
 					<span>${user.address.street}, ${user.address.suite},</span><br>
 					<span>${user.address.city} ${user.address.zipcode},</span><br>
@@ -57,19 +57,19 @@ function renderUsers(users) {
 				</p>
 			</div>
 			<div class="personal-info">
-				<img class="icon" src="/public/icons/phone.png" alt="${user.phone}">
+				<img class="icon" src="public/icons/phone.png" alt="${user.phone}">
 				<p>${user.phone}</p>
 			</div>
 			<div class="personal-info">
-				<img class="icon" src="/public/icons/website.png" alt="${user.website}">
+				<img class="icon" src="public/icons/website.png" alt="${user.website}">
 				<p>${user.website}</p>
 			</div>
 			<div class="personal-info">
-				<img class="icon" src="/public/icons/company-name.png" alt="${user.company.name}">
+				<img class="icon" src="public/icons/company-name.png" alt="${user.company.name}">
 				<p>${user.company.name}</p>
 			</div>
 			<div class="personal-info">
-				<img class="icon" src="/public/icons/company-bs.png" alt="${user.company.bs}">
+				<img class="icon" src="public/icons/company-bs.png" alt="${user.company.bs}">
 				<p>${user.company.bs}</p>
 			</div>
 			<div>
