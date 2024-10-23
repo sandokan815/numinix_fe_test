@@ -1,0 +1,84 @@
+#user-list {
+	font-family: Rubik;
+}
+
+.custom-card {
+	width: 363px;
+	height: 725px;
+	gap: 20px;
+	border-radius: 8px 0px 0px 0px;
+
+}
+
+.image {
+	height: 289px;
+	gap: 0px;
+	border-radius: 8px 8px 0px 0px;
+}
+
+.main-info {
+	margin-left: 28px;
+}
+
+.name {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
+	text-align: left;
+	color: #202223;
+	margin-top: 11px;
+	margin-bottom: 1.5px;
+
+}
+
+.user-name {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	text-align: left;
+	color: #909090;
+
+}
+
+.catchPhrase {
+	color: #51C5FF;
+
+}
+
+.personal-info {
+	display: flex;
+	align-items: start;
+	height: 25px;
+	margin-bottom: 10px;
+	margin-left: 28px;
+
+}
+
+.address {
+	height: 75px;
+}
+
+.icon {
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+
+	.image {
+		width: 106px;
+		height: 109px;
+		top: 23px;
+		left: 249px;
+		border-radius: 50%;
+		position: absolute;
+	}
+
+	.custom-card {
+		width: 380px;
+		height: 410px;
+		gap: 20px;
+		border-radius: 8px 0px 0px 0px;
+
+	}
+}

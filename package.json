@@ -1,0 +1,19 @@
+{
+    "name": "frontend_test_numinix",
+    "version": "1.0.0",
+    "description": "Vanila JS, CSS, Bootstrap, HTML, jQuery",
+    "main": "index.html",
+    "scripts": {
+      "start": "serve"
+    },
+    "keywords": [
+      "html",
+      "css"
+    ],
+    "author": "Anthony Roan",
+    "license": "MIT",
+    "devDependencies": {
+      "serve": "11.2.0"
+    }
+  }
+  
