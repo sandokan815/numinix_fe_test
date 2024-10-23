@@ -7,7 +7,10 @@
 	height: 725px;
 	gap: 20px;
 	border-radius: 8px 0px 0px 0px;
+}
 
+.card-element {
+	padding-bottom: 20px;
 }
 
 .image {
@@ -37,7 +40,7 @@
 	line-height: 25px;
 	text-align: left;
 	color: #909090;
-
+	margin-bottom: 10px;
 }
 
 .catchPhrase {
@@ -63,13 +66,27 @@
 	margin-top: 5px;
 }
 
-@media screen and (max-width: 600px) {
+.line-breaker {
+	display: none;
+}
 
+.address-desktop {
+	display: block;
+}
+
+.address-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	#card-container {
+		justify-content: center;
+	}
 	.image {
 		width: 106px;
 		height: 109px;
 		top: 23px;
-		left: 249px;
+		left: 230px;
 		border-radius: 50%;
 		position: absolute;
 	}
@@ -77,8 +94,48 @@
 	.custom-card {
 		width: 380px;
 		height: 410px;
-		gap: 20px;
 		border-radius: 8px 0px 0px 0px;
+		margin-bottom: 30px;
+	}
 
+	.name {
+		margin-top: 38px;
+		margin-bottom: -5px;
+		font-size: 16px;
+	}
+
+	.user-name {
+		font-size: 13px;
+		margin-bottom: 5px;
+	}
+
+	.catchPhrase {
+		max-width: 180px;
+		font-size: 13px;
+		line-height: 18px;
+	}
+
+	.main-info {
+		margin-left: 14px;
+	}
+
+	.personal-info {
+		margin-left: 14px;
+	}
+
+	.line-breaker {
+		display: block;
+	}
+
+	.address {
+		height: 50px;
+	}
+
+	.address-desktop {
+		display: none;
+	}
+	
+	.address-mobile {
+		display: block;
 	}
 }

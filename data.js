@@ -264,12 +264,13 @@ function renderUsers(users) {
 		const card = document.createElement("div");
 		card.className = "custom-card";
 		card.innerHTML = `
-		<div class="card">
+		<div class="card card-element">
 			<img src="${fakerImage}" class="card-img-top image">
 			<div class="main-info">
 				<p class="name">${user.name}</p>
     		<p class="user-name">@${user.username}</p>
 				<p class="catchPhrase">${user.company.catchPhrase}</p>
+				<hr class="line-breaker" width="90%" />
 			</div>
 			<div class="personal-info">
 				<img class="icon" src="/public/icons/email.png" alt="${user.email}">
@@ -277,10 +278,14 @@ function renderUsers(users) {
 			</div>
 			<div class="personal-info address">
 				<img class="icon" src="/public/icons/address.png" alt="${user.address.street}">
-				<p>
+				<p class="address-desktop">
 					<span>${user.address.street}, ${user.address.suite},</span><br>
 					<span>${user.address.city} ${user.address.zipcode},</span><br>
 					<span>${user.address.geo.lat}, ${user.address.geo.lng}</span>
+				</p>
+				<p class="address-mobile">
+					<span>${user.address.street}, ${user.address.suite}, ${user.address.city}</span><br>
+					<span> ${user.address.zipcode}, ${user.address.geo.lat}, ${user.address.geo.lng}</span>
 				</p>
 			</div>
 			<div class="personal-info">
