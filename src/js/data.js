@@ -1,4 +1,4 @@
-import { faker } from 'https://esm.sh/@faker-js/faker';
+import { faker } from 'https://cdn.jsdelivr.net/npm/@faker-js/faker/+esm';
 
 // Get user data using API
 const apiUrl = "https://jsonplaceholder.typicode.com/users";
@@ -33,7 +33,7 @@ function renderUsers(users) {
     card.className = "custom-card";
     card.innerHTML = `
 		<div class="card card-element">
-			<img class="image" src="${fakerImage}" class="card-img-top">
+			<img class="image" src="${fakerImage}" class="card-img-top" alt="">
 			<div class="main-info">
 				<p class="name">${user.name}</p>
     		<p class="user-name">@${user.username}</p>
