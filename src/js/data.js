@@ -6,32 +6,32 @@ const apiUrl = "https://jsonplaceholder.typicode.com/users";
 // function to fetch data from API
 let users;
 async function fetchUsers() {
-  try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
+	try {
+		const response = await fetch(apiUrl);
+		if (!response.ok) {
+			throw new Error("Network response was not ok");
+		}
 
-    // parse the JSON data
-    users = await response.json();
+		// parse the JSON data
+		users = await response.json();
 
-    renderUsers(users);
-  } catch (error) {
-    console.log("There was a problem with the fetch operation:", error);
-  }
+		renderUsers(users);
+	} catch (error) {
+		console.log("There was a problem with the fetch operation:", error);
+	}
 }
 
 // Function to render the users dynamically in the HTML
 function renderUsers(users) {
-  const container = document.getElementById("card-container");
-  container.innerHTML = "";
+	const container = document.getElementById("card-container");
+	container.innerHTML = "";
 
-  // loop through each user and create profile card
-  users.forEach((user) => {
-    const fakerImage = faker.image.avatar();
-    const card = document.createElement("div");
-    card.className = "custom-card";
-    card.innerHTML = `
+	// loop through each user and create profile card
+	users.forEach((user) => {
+		const fakerImage = faker.image.avatar();
+		const card = document.createElement("div");
+		card.className = "custom-card";
+		card.innerHTML = `
 		<div class="card card-element">
 			<img class="image" src="${fakerImage}" class="card-img-top" alt="">
 			<div class="main-info">
@@ -76,36 +76,36 @@ function renderUsers(users) {
 		<div>
     `;
 
-    container.appendChild(card);
-  });
+		container.appendChild(card);
+	});
 }
 
 // Detect if anyElement is shown
 function areAnyElementsShown(elements) {
-  return Array.from(elements).some(element => getComputedStyle(element).display === 'block');
+	return Array.from(elements).some(element => getComputedStyle(element).display === 'block');
 }
 
 // Implemnt automatic filter by search input
 function filterItems() {
-  const searchValue = document.getElementById('searchInput').value.toLowerCase();
-  const users = document.querySelectorAll('.main-info .name');
+	const searchValue = document.getElementById('searchInput').value.toLowerCase();
+	const users = document.querySelectorAll('.main-info .name');
 
-  users.forEach(user => {
-    const cardElement = user.closest('.custom-card');
-    if (user.textContent.toLocaleLowerCase().includes(searchValue)) {
-      cardElement.style.display = 'block';
-    } else {
-      cardElement.style.display = 'none';
-    }
-  });
+	users.forEach(user => {
+		const cardElement = user.closest('.custom-card');
+		if (user.textContent.toLocaleLowerCase().includes(searchValue)) {
+			cardElement.style.display = 'block';
+		} else {
+			cardElement.style.display = 'none';
+		}
+	});
 
-  const elements = document.querySelectorAll('.custom-card');
-  const anyElementsShown = areAnyElementsShown(elements);
-  if (!anyElementsShown) {
-    document.getElementById("noResult").style.display = "block";
-  } else {
-    document.getElementById("noResult").style.display = "none";
-  }
+	const elements = document.querySelectorAll('.custom-card');
+	const anyElementsShown = areAnyElementsShown(elements);
+	if (!anyElementsShown) {
+		document.getElementById("noResult").style.display = "block";
+	} else {
+		document.getElementById("noResult").style.display = "none";
+	}
 }
 
 // Listen search input field change and trigger function
